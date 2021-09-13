@@ -1,5 +1,5 @@
 Deface::Override.new(virtual_path: 'spree/admin/shared/_account_nav',
-  name: 'Remove menu items from drom down',
+  name: 'Remove menu items from drop down',
   replace: "div.dropdown-menu",
   text: <<-HTML
     <div class="dropdown-menu dropdown-menu-right overflow-hidden mt-2 p-0 mr-2">
