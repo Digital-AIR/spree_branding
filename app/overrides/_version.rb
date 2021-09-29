@@ -14,7 +14,7 @@ Deface::Override.new(
   text: <<-HTML
         <small
       class="font-weight-bold ml-3 my-3 text-muted">
-      powered by <%= svg_icon name: "bizio_commerce_logo.svg", width: '120', height: '25' %>
+      powered by <%= svg_icon name: "bizio-commerce-footer-logo.svg", width: '120', height: '25' %>
     </small>
     HTML
   )
