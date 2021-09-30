@@ -3,6 +3,6 @@ Deface::Override.new(
   name: 'Change Title',
   replace: 'erb[loud]:contains("administration")',
   text: <<-HTML
-        <%= "WildfireTv:" %>
+        <%= "Wildfireplus:" %>
     HTML
     )
