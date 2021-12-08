@@ -24,8 +24,8 @@ module Spree
         def by_product_name(products)
           return products unless product_name?
           taxons = Spree::Taxon.autocomplete(product_name)
-          taxon_ids = Spree::Taxon.where(name: taxons).select("id")
-          first_products_list = Spree::Product.joins(:classifications).where(Classification.table_name => { taxon_id: taxon_ids }).select("name")      
+          taxon_ids = Spree::Taxon.where(name: taxons).pluck(:id)
+          first_products_list = Spree::Product.joins(:classifications).where(Classification.table_name => { taxon_id: taxon_ids }).pluck(:name)     
           second_products_list = Spree::Product.autocomplete(product_name)
           products_list = first_products_list + second_products_list
           products.where(name: products_list)
